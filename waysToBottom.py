@@ -14,6 +14,13 @@ Right, down, down, right
 Down, right, down, right
 """
 
+# Best Solution
+# - Memoization
+# ways[row][col] = ways[row - 1][col] + ways[row][col - 1]]
+# time : O(wh) | space : O(wh)
+
+# DFS 
+# time : O(wh) | space : O(wh)
 def traverse(matrix, row, col):
     # at end
     if row == len(matrix) - 1  and col == len(matrix[0]) - 1:
