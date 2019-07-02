@@ -9,6 +9,34 @@ The number of adjacent 1s forming a river determin its size.
 Return an array of sizes of all rivers in the input matix. In any order.
 """
 
+"""
+Cleaner
+Space : O(nm) | Time : O(nm)
+def traverse(mat, i, j):
+    if i < 0 or i > len(mat)-1 or j < 0 or j > len(mat[0])-1 or mat[i][j] == 0:
+        return
+    
+    mat[i][j] = 0
+    traverse(mat, i, j + 1)
+    traverse(mat, i, j - 1)
+    traverse(mat, i + 1, j)
+    traverse(mat, i - 1, j)
+    
+    return 1
+    
+def riverSizes(mat):
+    #visited = [ [False for col in range(len(mat[0])) ] for row in range(len(mat))]
+    totalIslands = 0
+    for i in range(len(mat)):
+        for j in range(len(mat[0])):
+            if mat[i][j] == 1:
+                totalIslands += traverse(mat, i, j)
+    return totalIslands
+  
+"""
+
+
+
 # Time : O(wh) | Space: O(wh) - width and height of input matrix
 def riverSizes(matrix):
     array = []
