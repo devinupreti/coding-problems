@@ -43,6 +43,21 @@ class Solution {
     System.out.println(map); 
   }
   
+  public static void testStack(){
+    Stack<Integer> stack = new Stack<Integer>(); 
+    
+    stack.push(1);
+    stack.push(2);
+    stack.push(3);
+    System.out.println(stack);
+    Integer get = stack.pop();
+    
+    System.out.println(stack);
+    System.out.println(get);
+    System.out.println(stack.size());
+    System.out.println(stack.isEmpty());   
+  }
+  
   public static void main(String[] args){
     //testArrList();
     testHashMap();
