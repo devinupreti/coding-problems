@@ -58,6 +58,15 @@ class Solution {
     System.out.println(stack.isEmpty());   
   }
   
+  public static void testQueue(){
+    Queue<Integer> q = new LinkedList<>();
+    q.add(1);
+    q.add(2);
+    int head = q.remove();
+    int newHead = q.peek();
+    System.out.println(q.size());
+  }
+  
   public static void main(String[] args){
     //testArrList();
     testHashMap();
