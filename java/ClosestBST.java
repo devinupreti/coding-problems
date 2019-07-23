@@ -12,7 +12,7 @@ at each node, check closer & move in that direction
 
 */
 
-class Program {
+class ClosestBST {
   public static int findClosestValueInBst(BST tree, int target) {
 		double closest = Double.MAX_VALUE;
 		BST node = tree;
