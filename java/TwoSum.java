@@ -18,7 +18,7 @@ Solutions:
 import java.io.*;
 import java.util.*;
 
-class Program {
+class TwoSum {
   public static int[] twoNumberSum(int[] array, int targetSum) {
 		Arrays.sort(array);
 		// now array is sorted
